@@ -824,14 +824,15 @@ function main(params: string[], write = mkdirpWrite) {
    * Leaves external URLs as-is.
    */
   function toUrl(origPath: string) {
+    // Calculate the stamp on the origina fs-path
+    const stamp = stamper(origPath);
+
     let execPath = origPath;
 
     if (EXTERNAL_RE.test(origPath)) {
-      return origPath;
+      execPath = stamp ? `${execPath}?v=${stamp}` : execPath;
+      return execPath;
     }
-
-    // Calculate the stamp on the origina fs-path
-    const stamp = stamper(origPath);
 
     execPath = normalizePath(execPath);
     execPath = removeExternal(execPath);
