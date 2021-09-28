@@ -1,10 +1,10 @@
 {
-  "name": "html-insert-assets",
+  "name": "html-insert-assets-nr",
   "version": "0.14.2",
   "description": "Insert assets such as .js, .css into an HTML file.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jbedard/html-insert-assets.git"
+    "url": "https://github.com/fannairu/html-insert-assets.git"
   },
   "author": "Jason Bedard",
   "license": "MIT",
